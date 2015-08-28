@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+$:.unshift "#{File.expand_path(File.dirname(__FILE__))}/../lib"
+
+require 'rubygems'
+require 'bundler/setup'
+require 'nacjac'
+
+if ARGV.count < 3
+  puts "Usage:"
+  puts "  nacjac <target_url> <num_threads> <duration>"
+else
+  cannon = Nacjac::Cannon.new(ARGV[0], ARGV[1].to_i, ARGV[2].to_i)
+  cannon.blast
+  cannon.report
+end
