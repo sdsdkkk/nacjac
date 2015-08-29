@@ -10,7 +10,7 @@ $ gem install nacjac
 
 ## Usage
 
-The following line will spawn 2 threads to request http:///www.google.com for 10 seconds.
+The following line will spawn 2 threads to request http://www.google.com for 10 seconds.
 
 ```
 nacjac http://www.google.com 2 10
