@@ -7,10 +7,7 @@ module Nacjac
 
     def initialize(target_url)
       @target_url = target_url
-      @conn = Faraday.new(:url => target_url) do |faraday|
-        faraday.request  :url_encoded
-        faraday.adapter  Faraday.default_adapter
-      end
+      @conn = Faraday.new
     end
 
     def launch
